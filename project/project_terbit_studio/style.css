@@ -12,9 +12,27 @@ body {
 }
 
 .card {
-    border-radius: 0%;
+    border: none;
+}
+
+.card-group {
+    padding: 2rem;
+    margin-top: 5%;
+}
+
+.card-group .card {
+    padding: 2%;
+    background-color: transparent;
 }
 
 .col-sm-12 {
     background-color: #0a14c7;
+}
+
+.footer {
+    background-color: #0a14c7;
+}
+
+.card-footer {
+    background-color: transparent;
 }
