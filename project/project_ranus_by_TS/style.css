@@ -1,0 +1,13 @@
+body {
+    background-color: #f0f8ff;
+}
+
+.navbar {
+    background-color: #0a14c7;
+}
+
+.carousel {
+    padding-top: 4rem;
+    padding: 1%;
+    width: 65%;
+}
