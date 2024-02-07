@@ -6,8 +6,35 @@ body {
     background-color: #0a14c7;
 }
 
-.carousel {
+/* .carousel {
     padding-top: 4rem;
     padding: 1%;
     width: 65%;
+} */
+
+.card {
+    border: transparent;
+}
+
+.card-group {
+    padding: 0rem;
+    margin-top: 0%;
+}
+
+.card-footer {
+    background-color: transparent;
+}
+
+.card-img {
+    filter: brightness(60%);
+}
+
+.card-group .card {
+    padding: 2%;
+    background-color: transparent;
+}
+
+footer {
+    background-color: #0a14c7;
+    text-align: center;
 }

@@ -12,12 +12,17 @@ body {
 }
 
 .card {
-    border: none;
+    border: transparent;   
 }
 
 .card-group {
-    padding: 2rem;
-    margin-top: 5%;
+    padding: 0rem;
+    margin-top: 0%;
+
+}
+
+.card-img {
+    filter: brightness(50%);
 }
 
 .card-group .card {
@@ -25,9 +30,10 @@ body {
     background-color: transparent;
 }
 
-.col-sm-12 {
+/* .col-sm-12 {
     background-color: #0a14c7;
-}
+    text-align: center;
+} */
 
 .footer {
     background-color: #0a14c7;
@@ -35,4 +41,5 @@ body {
 
 .card-footer {
     background-color: transparent;
+    margin-bottom: 20px;
 }
