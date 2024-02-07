@@ -148,16 +148,27 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <form>
+                        
+                        <div class="alert my-alert alert-success alert-dismissible fade show d-none" role="alert">
+                            <strong>Terimakasih!</strong> Sudah mengirim Masukkan anda untuk kami.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+
+                        <form name="submit-to-google-sheet">
                             <div class="form-group fw-bold">
                                 <label for="nama">Nama</label>
-                                <input type="number" class="form-control" id="nama" placeholder="Block error -970" disabled>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama" name="nama">
                             </div>
                             <div class="form-group fw-bold">
                                 <label for="pesan">Pesan</label>
-                                <textarea class="form-control" rows="10" placeholder="Block error -2344" disabled></textarea>
+                                <textarea class="form-control" id="pesan" rows="10" placeholder="Masukkan Pesan" name="pesan"></textarea>
                             </div>
-                            <button class="btn btn-primary mt-2" disabled>Kirim Pesan</button>
+                            <button type="submit" class="btn btn-primary btn-kirim">Kirim Pesan</button>
+
+                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -191,7 +202,35 @@
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzQ7kRfUnue9DyeuVBV1vsA1rI_ubQc1QHq-KIhGOjN1xL3gTrwFxC8cE5vBNGwvnxs2w/exec'
+        const form = document.forms['submit-to-google-sheet'];
+        const btnKirim = document.querySelector(".btn-kirim");
+        const btnLoading = document.querySelector(".btn-loading");
+        const myAlert = document.querySelector(".my-alert");
 
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            // Ketika tombol submit diklik
+            // tampilkan tombol loading, hilangkan tombol kirim
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    // tampilkan tombol kirim, hilangkan tombol loading
+                    btnLoading.classList.toggle("d-none");
+                    btnKirim.classList.toggle("d-none");
+                    // tampilkan alert
+                    myAlert.classList.toggle('d-none');
+                    // reset form
+                    form.reset();
+                    console.log('Success!', response);
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
+    
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
