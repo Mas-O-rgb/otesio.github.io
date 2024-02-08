@@ -13,14 +13,14 @@ nav {
 
 .jumbotron {
     padding-top: 4rem;
-    padding-bottom: rem;
+    padding-bottom: 0%;
     /* background-color: #f0f8ff; */
 }
 
-.about {
+.myWords {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    background-color: #111bd9;
+    background-color: #cae6ff;
 }
 
 .project {
