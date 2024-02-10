@@ -1,13 +1,46 @@
+/* html {
+    position: relative;
+} */
+
 body {
     background-color: #f0f8ff;
+    /* margin-bottom: 22rem; */
 }
 
 .navbar {
     background-color: #0a14c7;
 }
 
-.carousel {
-    padding-top: 4rem;
-    padding: 1%;
-    width: 65%;
+.card {
+    border: transparent;   
+}
+
+.card-group {
+    padding: 0rem;
+    margin-top: 0%;
+
+}
+
+.card-img {
+    filter: brightness(50%);
+}
+
+.card-group .card {
+    padding: 2%;
+    background-color: transparent;
+}
+
+/* .col-sm-12 {
+    background-color: #0a14c7;
+    text-align: center;
+} */
+
+.footer {
+    background-color: #0a14c7;
+}
+
+.card-footer {
+    background-color: transparent;
+    margin-bottom: 20px;
+    text-align: center;
 }
