@@ -7,6 +7,10 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <!-- AOS -->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <!-- CSS gua Sendiri -->
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="img/OKAY 3 (1).png">
@@ -46,7 +50,7 @@
 
         <!-- Awal Jumbotron -->
         <section class="jumbotron text-center">
-            <img src="img_background/fuck.png" class="pb-4" alt="Okay Logos" width="250">
+            <img src="img_background/fuck.png" class="pb-4" alt="Okay Logos" width="250"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="2500">
             <h1 class="display-4 fw-bold">Hello.. Madefaker!</h1>
             <figure class="text-center mt-5">
                 <blockquote class="blockquote">Halaman sedang dalam masa Percobaan</blockquote>
@@ -67,15 +71,15 @@
         <section class="myWords" id="kata-kata">
             <div class="container">
                 <div class="row">
-                    <div class="row text-center mb-4 text-dark">
+                    <div class="row text-center mb-4 text-dark" data-aos="zoom-in" data-aos-delay="500">
                         <h2>Gua kasih kata-kata dikit nihh</h2>
                     </div>
                 </div>
                 <div class="row justify-content-center fs-5 text-center text-dark">
-                    <div class="col-sm-5 col-sm-offset-1">
+                    <div class="col-sm-5 col-sm-offset-1" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
                         <p>"Apabila kita meninggalkan sesuatu karena Allah, Insyaallah, Allah akan menggantikan sesuatu itu dengan yang lebih baik. Namun keadaan memang tidak selalu baik, tapi setidaknya jangan pernah membuatnya menjadi lebih buruk dengan banyak mengeluh."</p>
                     </div>
-                    <div class="col-sm-5 col-sm-offset-1">
+                    <div class="col-sm-5 col-sm-offset-1" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
                         <p> "Bukan dia yang memberi harapan, tapi dirimu sendiri yang menciptakan harapan itu hingga sakit dan kecewa. Sebaik-baik berharap hanya kepada Allah, yang tidak pernah mengecewakan hamba-hamba-Nya! :* "</p>
                     </div>
                 </div>
@@ -93,12 +97,12 @@
             </div>
             
             <div class="container text-center lh-lg" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
-                <p class="mb-5">Kamu bisa melihat hasil dari project kita. Klik Selengkapnya untuk menulusuri lebih lanjut.</p>
+                <p class="mb-5">Kamu bisa melihat Gallery dari project kita. Klik Selengkapnya untuk menulusuri lebih lanjut.</p>
             </div>
 
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-4 mb-3">
+                    <div class="col-sm-4 mb-3" data-aos="zoom-in" data-aos-delay="300">
                         <div class="border border-5 border-white shadow">
                             <div class="container card">
                                 <img src="img/OKAY 3 (1).png">
@@ -109,7 +113,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 mb-3">
+                    <div class="col-sm-4 mb-3" data-aos="zoom-in" data-aos-delay="600">
                         <div class="border border-5 border-white shadow">
                             <div class="container card">
                                 <img src="img_terbitstudio/profil_logo_wm_4_2.png" alt="">
@@ -120,7 +124,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-4 mb-3">
+                    <div class="col-sm-4 mb-3" data-aos="zoom-in" data-aos-delay="900">
                         <div class="border border-5 border-white shadow">
                             <div class="container card">
                                 <img src="img_terbitstudio/profil_logo_wm_4_2.png" alt="">
@@ -136,7 +140,7 @@
         <!-- Akhir Project -->
 
         <!-- Awal Contact -->
-        <section class="contact" id="Contact">
+        <section class="form" id="Contact">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
@@ -162,9 +166,9 @@
                                 <label for="pesan">Pesan</label>
                                 <textarea class="form-control" id="pesan" rows="10" placeholder="Masukkan Pesan" name="pesan"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-kirim">Kirim Pesan</button>
+                            <button type="submit" class="btn btn-primary btn-kirim mt-2">Kirim Pesan</button>
 
-                            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                            <button class="btn btn-primary btn-loading d-none mt-2" type="button" disabled>
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                                 Loading...
                             </button>
@@ -196,14 +200,21 @@
             </div>
         </footer>
         <!-- Akhir Footer -->
+    
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- JS form -->
+    <script src="script.js"></script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-    <script src="script.js"></script>
-    
+
     <!-- Option 2: Separate Popper and Bootstrap JS -->
     <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
